@@ -1,3 +1,22 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL= "/"
+languageCode= "en"
+title= "tomaso's notes"
+paginate = 5
+copyright = "All rights reserved"
+theme = "hugo-theme-casper"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+  description = "On computers and stuff"
+#  metadescription = "Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead"
+  cover = "images/100_0553.JPG"
+  author = "Tomáš Kouba"
+#  authorlocation = "Earth, Milky Way Galaxy"
+  authorwebsite = ""
+  authorbio= ""
+  logo = ""
+  hjsStyle = "default"
+  paginatedsections = ["posts"]
+  githubName = "tomaso"
+  twitterName = "tomaso"
+  facebookName = "tomas.kouba.5"
