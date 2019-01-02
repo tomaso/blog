@@ -4,12 +4,12 @@ date: "2019-01-01"
 image: images/katrin-leinfellner-571533-unsplash.jpg
 customFooterPartial: Photo by Katrin Leinfellner on Unsplash
 ---
-Simple backup solution for user data.
+Simple backup solution for my (user) data.
 <!--more-->
 
 ## Tools selection
 
-To regularly backup my data I use [Duplicity][Duplicity] cloud storage [BackBlaze][BackBlaze].
+To regularly backup my data I use [Duplicity][Duplicity] as a software and [BackBlaze][BackBlaze] as a cloud storage.
 
 The main reasons for Duplicity:
 
@@ -33,14 +33,14 @@ pip2 install b2
 
 ## Backup command
 
-I store the secrets (env. variables) in KeePassXC.
+I store the secrets (env. variables) in KeePassXC. `ACCOUNT_ID`, `APP_KEY` and `BUCKET` name can be obtained from backblace web user interface.
 
 ```
-PASSPHRASE=<gpg password>
 ACCOUNT_ID=
 APP_KEY=
 BUCKET=krabice-backup
 DIR=nextcloud_data
+PASSPHRASE=<gpg password>
 
 duplicity list-current-files b2://${ACCOUNT_ID}:${APP_KEY}@${BUCKET}/${DIR}/
 duplicity --allow-source-mismatch incremental /data/nextcloud/data/ b2://${ACCOUNT_ID}:${APP_KEY}@${BUCKET}/${DIR}/

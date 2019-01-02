@@ -1,4 +1,4 @@
-baseURL= "/"
+baseURL= "https://tomaso.cz/blog/"
 languageCode= "en"
 title= "tomaso's notes"
 paginate = 5
